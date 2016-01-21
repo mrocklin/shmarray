@@ -9,7 +9,7 @@ setup(name='shmarray',
       description='Array dump in shared memory',
       maintainer='Matthew Rocklin',
       maintainer_email='mrocklin@gmail.com',
-      install_requires=['numpy', 'posix_ipc'],
+      install_requires=['posix_ipc'],
       packages=['shmarray'],
       long_description=(open('README.md').read() if os.path.exists('README.md')
                         else ''),
