@@ -1,0 +1,5 @@
+recursive-include shmarray *.py
+
+include setup.py
+include README.md
+include MANIFEST.in
