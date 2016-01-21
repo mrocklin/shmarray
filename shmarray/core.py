@@ -24,6 +24,7 @@ def remove(addr):
 
 def put(addr, x):
     """ Put numpy array bytes into shared memory bucket """
+    x = np.asanyarray(x)
     with get_lock(addr):
         f = posix_ipc.SharedMemory(addr, flags=posix_ipc.O_CREAT, read_only=False)
         ff = os.fdopen(f.fd, 'ab')

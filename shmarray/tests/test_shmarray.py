@@ -27,3 +27,11 @@ def test_threaded():
     y = get('foo', x.dtype)
     assert (y == np.concatenate([x] * 100)).all()
 
+
+def test_non_array():
+    remove('foo')
+    put('foo', [1, 2, 3])
+    put('foo', [4, 5, 6])
+
+    y = get('foo', int)
+    assert (y == [1, 2, 3, 4, 5, 6]).all()
